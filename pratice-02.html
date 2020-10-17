@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 02</title>
+    <style>
+        fieldset{
+            display: inline-block;
+        }
+
+        .display{
+            color: navy;
+        }
+
+        input{
+            size: 30px;
+        }
+    </style>
+
+</head>
+<body>
+<!--Unit 1------------------------------------------------------------------------------------------------------------->
+<fieldset>
+    <legend>Unit 1</legend>
+    <p class="display">Tính bình phương của một số bất kỳ được đưa vào.</p>
+    <input type="number" id="power" oninput="powerOfNumber(this.value)" placeholder="0">
+    <p id="resultUnit1">Bình phương</p>
+</fieldset>
+<!--Unit 2------------------------------------------------------------------------------------------------------------->
+<fieldset>
+    <legend>Unit2</legend>
+    <p class="display">Tính diện tích, hàm tính chu vi hình tròn. Nhập vào bánh kinh:</p>
+    <input type="number" id="banKinh" oninput="calculatePerimeter(this.value);calculateAcreage(this.value)" placeholder="0">
+    <p id="perimeter">Chu vi hình tròn</p>
+    <p id="acrecage">Diện tích hình tròn</p>
+</fieldset>
+<!--Unit 3------------------------------------------------------------------------------------------------------------->
+<fieldset>
+    <legend>Unit 3</legend>
+    <p class="display">Giai thừa của một số nguyên</p>
+    <input type="number" oninput="calculateFactorials(this.value)" placeholder="0">
+    <p id="resultUnit3">Result</p>
+</fieldset>
+<!--Unit 4------------------------------------------------------------------------------------------------------------->
+<fieldset>
+    <legend>Unit 4</legend>
+    <p class="display">Kiểm tra là ký tự số</p>
+    <input type="text" oninput="isNumber(this.value)">
+    <p id="resultUnit4">Result</p>
+</fieldset>
+<!--Unit 5------------------------------------------------------------------------------------------------------------->
+<fieldset>
+    <legend>Unit 5</legend>
+</fieldset>
+<!--Unit 6-->
+<!--Unit 7-->
+<!--Unit 8-->
+<!--Unit 9-->
+<script src="practice-02.js"></script>
+</body>
+</html>
