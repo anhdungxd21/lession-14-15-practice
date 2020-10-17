@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập tạo và sử dụng hàm 01</title>
+    <style>
+        fieldset{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="alertMessage()">Xin chao</button>
+    <br>
+    <br>
+    <fieldset>
+        <legend>Unit 2</legend>
+        <input type="number" id="num" oninput="increaseNum(this.value)">
+        <p id="result"></p>
+    </fieldset>
+    <!--  Unit 3  -->
+    <fieldset>
+        <legend>Unit 3</legend>
+        <label for="number1">Number 1</label>
+        <input type="number" id="number1">
+        <label for="number2">Number 2</label>
+        <input type="number" id="number2">
+        <input type="button" onclick="addNumber(+number1.value,+number2.value)" value="Submit!">
+        <p id="result3"></p>
+    </fieldset>
+    <!--  Unit 5  -->
+    <fieldset>
+        <legend>Unit 5</legend>
+        <p>Nhập tên chòm sao: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus</p>
+        <input type="text" id="inputStar" oninput="displayGroupOfStar(this.value)">
+        <p id="showStar"></p>
+    </fieldset>
+    <script>
+        //Unit 1
+        function alertMessage() {
+            alert("Xin chao");
+        }
+        //Unit 2
+        function increaseNum(num) {
+
+            document.getElementById("result").innerHTML = parseFloat(num) + 1;
+        }
+        //Unit 3
+        let number1 = document.getElementById("number1");
+        let number2 = document.getElementById("number2");
+        function addNumber(value1,value2) {
+            let result = 0;
+            if (value1 > value2)
+                alert("Giá trị một lớn hơn giá trị hai");
+            else {
+                result = value1 + value2;
+                alert(`Tổng của ${value1} và ${value2} là ${result}`);
+            }
+        }
+        //Unit 4
+        // function addNumbers() {
+        //     let firstNum = 4;
+        //     let secondNum = 8;
+        //     result = firstNum + secondNum;
+        //     return result;
+        // }
+        // let result = 0;
+        // alert("Result before: " + result);
+        // result = addNumbers();
+        // alert("Result after: " + result);
+
+        //Unit 5
+        let starArr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let groupStar = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function displayGroupOfStar(star) {
+            let index = 0;
+            let i = 0;
+            while (i < starArr.length) {
+                if (star == starArr[i]){
+                    index = i;
+                    console.log(i)
+                    break;
+                } else {
+                    // return -1;
+                    document.getElementById("showStar").innerHTML = -1;
+                }
+                i++;
+            }
+            // return groupStar[index];
+            document.getElementById("showStar").innerHTML = groupStar[i];
+        }
+    </script>
+</body>
+</html>
