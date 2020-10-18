@@ -31,7 +31,7 @@ function calculateFactorials(num) {
     }
     resultUnit3.innerHTML = "Result: " + result;
 }
-//Unit 4 ----------------------------------------------------------
+//Unit 4 -----------------------------------------------------------
 let resultUnit4 = document.getElementById("resultUnit4");
 function isNumber(val) {
     if (!isNaN(val)) {
@@ -40,5 +40,32 @@ function isNumber(val) {
     } else {
         resultUnit4.innerHTML = "False";
         // return false;
+    }
+}
+//Unit 5 -----------------------------------------------------------
+let resultUnit5 = document.getElementById("resultUnit5");
+function isSmallest() {
+    // let num1 = arguments[0];
+    // let num2 = arguments[1];
+    // let num3 = arguments[2];
+    let min = arguments[0];
+    for (let i = 1; i < arguments.length; i++) {
+        console.log(+arguments[i]);
+        if (min > +arguments[i]){
+            min = +arguments[i];
+        }
+    }
+    resultUnit5.innerHTML = min;
+}
+//Unit 6 -----------------------------------------------------------
+let resultUnit6 = document.getElementById("resultUnit6");
+function isPositiveNumber(val) {
+    if (isNaN(val)) {
+        resultUnit6.innerHTML = "Không phải là số";
+    } else if (val % 1 === 0){
+        if(val >= 0) resultUnit6.innerHTML = "true";
+        else resultUnit6.innerHTML = "false";
+    } else{
+        resultUnit6.innerHTML = "Không phải số nguyên"
     }
 }
